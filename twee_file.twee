@@ -257,6 +257,21 @@ function ajustarAltura() {
 window.addEventListener('resize', ajustarAltura);
 ajustarAltura(); // Chamada inicial
 
+// Dynamically add the Google Font link to the head
+var link = document.createElement("link");
+link.href = "https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap";
+link.rel = "stylesheet";
+document.head.appendChild(link);
+
+// Optionally, you can also dynamically add a style rule
+var style = document.createElement("style");
+style.innerHTML = `
+    tw-story {
+        font-family: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+    }
+`;
+document.head.appendChild(style);
+
 :: StoryStylesheet [stylesheet]
 /* Reset for height and scroll */
 html, body {
@@ -268,7 +283,7 @@ html, body {
 
 /* General style */
 tw-story {
-    font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+    font-family: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
     color: #fff;
     background: linear-gradient(to bottom, #003366, #006699);
     text-align: center;
