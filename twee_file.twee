@@ -111,6 +111,7 @@ Um brechó, uma música ao fundo, um rastro na areia</p>
 (if: $brecho is false)[<button>[[Dar uma passadinha no brechó|brecho]]</button>]
 (if: $casadaju is false)[<button>[[Seguir a música|theoffice]]</button>]
 <button>[[Seguir o rastro|fome]]</button>
+<button>[[Seguir a música|theoffice]]</button>
 
 
 
@@ -168,6 +169,11 @@ Parece que Biriba está numa aula de hot-yoga</p>
 
 
 :: ju {"position":"1200,1050","size":"100,100"}
+<audio
+ src="C:/Users/pedro/Documents/Twine/Stories/the_office.mp3" 
+ autoplay>
+</audio>
+
 <img src="C:/Users/pedro/Documents/Twine/Stories/casaju.jpg">
 <p>Bem-vinda à ''casa da Ju''!!
 Parabéns 🎉🎉🎉🎉
@@ -230,11 +236,27 @@ Estou com muita fome, me ajuda a procurar comida?</p>
 
 
 :: theoffice {"position":"1150,875","size":"100,100"}
-<audio controls>
-  <source src="C:/Users/pedro/Documents/Twine/Stories/the_office.mp3" type="audio/ogg">
+<p>Aumente o som</p>
+
+<audio
+ src="C:/Users/pedro/Documents/Twine/Stories/the_office.mp3" 
+ autoplay>
 </audio>
 
-<button>[[Seguir o som|ju]]</button>
+
+(set: $sec to 0)
+(live:1s)[
+ (set: $sec to it + 1)
+ (if: $sec > 1)[Pera
+ ]
+ (if: $sec > 3)[Eu reconheço essa música
+ ]
+ (if: $sec > 5)[Só pode ser
+ ]
+  (if: $sec > 7)[....]
+ (if: $sec > 8)[<button>[[Seguir o som|ju]]</button>]
+]
+
 
 
 :: tioma {"position":"975,1375","size":"100,100"}
