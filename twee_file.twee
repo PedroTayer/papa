@@ -1,0 +1,429 @@
+:: StoryTitle
+Fundo do Mar
+
+
+:: StoryData
+{
+  "ifid": "F47236DC-4163-4F60-B3CB-013ACBAB9CFB",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Intro",
+  "zoom": 1
+}
+
+
+:: \ Cena 3 {"position":"900,750","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/fundo.jpg">
+<p>Incrível Papa! Você encontrou o mapa!
+Siga-me!</p>
+<p>Você segue Biriba mas uma forte correnteza faz vocês se perderem</p>
+<button>[[Ligar o waze|celular]]</button>
+<button>[[Manter a calma e esperar a correnteza passar|cruzamento]]</button>
+
+
+:: Cena 1 {"position":"900,475","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/brilhante.jpg">
+<p>Enquanto segue Biriba, você ve uma coisa brilhante no chão
+Se você pegar você vai se perder do Biriba, e agora?</p>
+<button>[[Eu sou muito boa com caminhos!! Vou parar e depois eu me acho|mentira]]</button>
+<button>[[Pera ai Biriba!! Rapidinho|esperabiriba]]</button>
+<button>[[Ignorar e seguir Biriba|Cena 2]]</button>
+
+
+:: Cena 13 {"position":"500,1100","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/brecho.webp">
+<p>Bem-vinda ao ''Brechó do lado da clínica''!!
+Parabéns 🎉🎉🎉🎉
+Você ganhou
+<h1>''(text-colour:#862e9c)[Vale-compras de 100 reais no brechó]''</h1>
+(set: $brecho to true)
+<button>[[Voltar para cruzamento|cruzamento]]</button>
+
+
+:: Cena 2 {"position":"900,625","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/escola.webp">
+(if: $mapa is true)[<p>Biriba ainda está esperando em frente à escola
+Ele precisa de um mapa que está com uma entidade mágica</p>]
+(else:)[<p>Biriba parou em frente a uma escola
+Ele precisa de um mapa que está com uma entidade mágica</p>]
+<button>[[Entrar na escola|escola]]</button>
+(if: $mapa is true)[<button>[[Entregar mapa para Biriba| Cena 3]]</button>]
+
+
+:: Cena 7 {"position":"375,775","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/caverna.jpg">
+<p>Ela cava tanto que acha um túnel!!</p>
+<button>[[Entrar no túnel|aspargus]]</button>
+<button>[[Voltar para porta da escola|Cena 2]]</button>
+
+
+:: Intro [inicio] {"position":"900,275","size":"100,100"}
+<h1>Oi Papa! Bem-vinda ao Fundo do Mar!</h1>
+<p>Eu sou o Biriba e serei seu guia nessa aventura mágica!
+Você está prestes a explorar maravilhas submarinas. Bora?</p>
+<img src="C:/Users/pedro/Documents/Twine/Stories/biriba.jpeg">
+<button>[[🐠 Seguir o Biriba!|Cena 1]]</button>
+
+(set: $brecho to false)
+(set: $casadaju to false)
+
+
+:: aspargus {"position":"275,900","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/aspargus.png">
+<p>Você encontra o Aspargus! Maria late feliz, hoje é dia de feijoada!</p>
+<button>(text-colour:#087f5b)[[ITADAKIMASU|pegarmapa]]</button>
+
+
+:: brecho {"position":"675,900","size":"100,100"}
+<p>Você também vai comprar coisas pro seu namorado lindo?</p>
+<button>[[Sim|Cena 13]]</button>
+<button>[[Não|morreu]]</button>
+
+
+:: brilhante {"position":"575,425","size":"100,100"}
+<p>Parabéns 🎉🎉🎉🎉
+Você obteve
+(text-colour:#862e9c)[''Invisalign Dourado!'']</p>
+<button>[[Voltar e seguir Biriba!|Cena 2]]</button>
+(set: $invisa to true)
+
+
+:: carinho {"position":"475,650","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/cava.png">
+<p>Maria te guia até um lugar onde ela começa a cavar</p>
+<button>[[Deixar Maria cavar|Cena 7]] </button>
+<button>[[Dar bronca na Maria|morreu]]</button>
+
+
+:: celular {"position":"725,775","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/quatrocantos.jpg">
+<p>Quando você estava nos 4 cantos, um peixe passou e roubou seu celular
+Sua única opção é esperar a correnteza passar</p>
+<button>[[Manter a calma e esperar a correnteza passar|cruzamento]]</button>
+
+
+:: cruzamento {"position":"900,900","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/cruzamento.webp">
+<p>A correnteza passa... e você está em um cruzamento
+De repente muitas coisas aparecem.
+Um brechó, uma música ao fundo, um rastro na areia</p>
+(if: $brecho is false)[<button>[[Dar uma passadinha no brechó|brecho]]</button>]
+(if: $casadaju is false)[<button>[[Seguir a música|theoffice]]</button>]
+<button>[[Seguir o rastro|fome]]</button>
+
+
+
+:: escola {"position":"625,600","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/maria.jpg">
+<p>Bem-vinda à ''escolhinha da Maria''!!
+Ela vem abanando o rabinho até você</p>
+<button>[[Ignorar|morreu]]</button>
+<button>[[Fazer carinho|carinho]]</button>
+
+
+:: esperabiriba {"position":"750,375","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/oi.webp">
+<p>Biriba: você vai atrasar?</p>
+<button>[[Sim|brilhante]]</button>
+<button>[[Não, eu nunca me atraso|esperabiriba]]</button>
+
+
+:: fim {"position":"1125,1800","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/final.jpg">
+<p>Parabéns 🎉🎉🎉🎉
+Você ganhou</p>
+<h1>''(text-colour:#862e9c)[Mergulho em Arraial do Cabo]''</h1>
+<button>[[Terminar|resumo]]</button>
+(set: $mergulho to true)
+
+
+
+:: fome {"position":"875,1075","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/tioma.png">
+<p>Ao seguir o restro você encontra...
+Um lindo peixe azul !!!</p>
+<button>[[Falar com ele|peixeazul]]</button>
+<button>[[Voltar para o cruzamento|cruzamento]]</button>
+
+
+:: gymrats {"position":"1050,1675","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/biriba2.jpeg">
+<p>Você encontrou o Biriba!
+De repente vocês encontram um lindo Baú Dourado
+A chave tem um formato de invisalign</p>
+(if: $invisa is false)[<p>Será que é aquela coisa brilhante que deixei passar</p>]
+(if: $invisa is false)[<button>[[Pedir para Biriba te guiar de volta|Cena 1]]</button>]
+(if: $invisa is false)[<button>[[Cansei|resumo]]</button>]
+(if: $invisa is true)[<button>[[Inserir Invisalign Durado|fim]]</button>]
+<button>[[Voltar para cruzamento|cruzamento]]</button>
+
+
+:: ioga {"position":"975,1550","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/ioga.jpg">
+<p>A água vai ficando muito quente
+Parece que Biriba está numa aula de hot-yoga</p>
+<button>[[Vou ver o GymRats para saber se vou|gymrats]]</button>
+<button>[[Vou na Hot, não faço exercício só por causa do GymRats|ioga]]</button>
+
+
+:: ju {"position":"1200,1050","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/casaju.jpg">
+<p>Bem-vinda à ''casa da Ju''!!
+Parabéns 🎉🎉🎉🎉
+Você ''GANHOU''
+<h1>''(text-colour:#862e9c)[Jantar num restaurante vegano!]''</h1>
+
+<p>Obrigado por tudo Ju</p>
+
+(set: $casadaju to true)
+<button>[[Voltar para cruzamento|cruzamento]]</button>
+
+
+:: mentira {"position":"1125,450","size":"100,100"}
+<p>Amor, isso é mentira, chama o Biriba👍</p>
+<button>[[Verdade lindo você está certo, como sempre|Cena 1]]</button>
+
+
+:: morreu {"position":"325,400","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/perdeu.jpg">
+<p>Você perdeu</p>
+<button>[[Recomeçar|Intro]]</button>
+
+
+:: pegarmapa {"position":"425,950","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/mago.png">
+<p>Leve essa marmita com bolinhas de queijo para comer com a Le entre os atendimentos
+Siga o peixe azul
+Entregue esse mapa para Biriba
+</p>
+
+<p>Parabéns 🎉🎉🎉🎉
+Você obteve:
+(text-colour:#862e9c)[''Marmita'']
+(text-colour:#862e9c)[''Mapa'']</p>
+
+<button>[[Pegar os itens e voltar para Biriba|Cena 2]]</button>
+(set: $mapa to true)
+(set: $marmita to true)
+
+
+:: peixeazul {"position":"950,1225","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/tioma2.png">
+<p>Olá, eu sou o Peixe M
+Estou com muita fome, me ajuda a procurar comida?</p>
+
+(if: $marmita is true)[<button>[[Entregar marmita para o peixe azul|tioma]]</button>]
+<button>[[Voltar para o cruzamento|cruzamento]]</button>
+
+
+:: resumo {"position":"900,1825","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/mergulho.jpeg">
+<h1>Feliz aniversário gatinha! Te amo!</h1>
+<p> Você ganhou
+(if: $brecho is true)[(text-colour:#862e9c)[Vale-compras de 100 reais no brechó]]
+(if: $casadaju is true)[(text-colour:#862e9c)[Jantar num restaurante vegano]]
+(if: $mergulho is true)[(text-colour:#862e9c)[Mergulho em arraial do cabo]]</p>
+
+<p> Fim do jogo ! </p>
+
+
+:: theoffice {"position":"1150,875","size":"100,100"}
+<audio controls>
+  <source src="C:/Users/pedro/Documents/Twine/Stories/the_office.mp3" type="audio/ogg">
+</audio>
+
+<button>[[Seguir o som|ju]]</button>
+
+
+:: tioma {"position":"975,1375","size":"100,100"}
+<img src="C:/Users/pedro/Documents/Twine/Stories/tioma3.jpg">
+<p>Depois de comer o peixe M começa a se transformar....
+
+no Tio Ma!
+
+E ele diz que sabe onde encontrar o Biriba !</p>
+
+<button>[[Seguir Tio Ma (kkkkkk)|ioga]]</button>
+
+
+:: StoryScript [script]
+function ajustarAltura() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', ajustarAltura);
+ajustarAltura(); // Chamada inicial
+
+:: StoryStylesheet [stylesheet]
+/* Reset para altura e remoção de scroll */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Remove o scroll vertical */
+}
+
+/* Estilo geral */
+tw-story {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #003366, #006699); /* Gradiente azul */
+    text-align: center;
+    padding: 20px;
+    height: 100vh; /* Altura igual à altura visível da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Estilo para cenas específicas com a tag [inicio] */
+tw-story[tags~="inicio"] {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20230630/pngtree-3d-render-of-underwater-stone-abstract-background-image_3691196.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    animation: fadeIn 1s ease-out; /* Animação suave ao entrar na cena */
+}
+
+/* Estilo para conteúdo dentro das cenas */
+.intro-content, .scene-content {
+    padding: 25px;
+    background: rgba(0, 51, 102, 0.8); /* Fundo mais transparente */
+    border-radius: 20px;
+    margin: 20px;
+    max-width: 650px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    backdrop-filter: blur(10px); /* Maior desfoque */
+    transition: transform 0.3s ease;
+}
+
+/* Animação suave de entrada */
+.intro-content, .scene-content:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para cabeçalhos */
+h1, h2 {
+    font-size: 3.2em;
+    color: #ff9900; /* Laranja suave */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6); /* Sombra mais intensa */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover para cabeçalhos */
+h1:hover, h2:hover {
+    color: #ffcc00; /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilo para parágrafos */
+p {
+    font-size: 1.6em;
+    line-height: 1.8;
+    margin: 25px auto;
+    color: #003366;
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo mais claro */
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Animação suave nos parágrafos ao passar o mouse */
+p:hover {
+    transform: translateY(-8px); /* Eleva mais ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.9); /* Alteração no fundo */
+}
+
+/* Estilo para botões */
+button {
+    background-color: #ffb84d; /* Cor suave: laranja claro */
+    color: #003366;
+    font-size: 1.4em; /* Tamanho de texto aumentado */
+    padding: 18px 40px;
+    margin: 15px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background-color: #ff9933; /* Laranja mais intenso */
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+/* Efeito de clique nos botões */
+button:active {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para imagens */
+img {
+    width: 80%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover nas imagens */
+img:hover {
+    transform: scale(1.05); /* Imagem aumenta suavemente */
+}
+
+/* Estilo para textos soltos */
+span, div {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #003366;
+    padding: 14px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    font-size: 1.3em;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito de hover nos textos soltos */
+span:hover, div:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para links */
+a {
+    color: #ffb84d; /* Cor de link suave */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Efeito de hover nos links */
+a:hover {
+    color: #ff9933;
+    text-decoration: underline;
+    transform: scale(1.1); /* Aumenta o link suavemente */
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,233 @@
+:: StoryTitle
+Fundo do Mar
+
+
+:: StoryData
+{
+  "ifid": "F47236DC-4163-4F60-B3CB-013ACBAB9CFB",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Intro",
+  "zoom": 1
+}
+
+
+:: \ Cena 3 {"position":"900,750","size":"100,100"}
+<p>Você segue Biriba mas de repente uma forte correnteza chega e vocês se perdem</p>
+[[Ligar o waze|celular]]
+[[Manter a calma e esperar a correnteza passar|Cena 12]]
+
+
+:: Cena 1 {"position":"900,475","size":"100,100"}
+
+<img src=test.jpeg>
+<p>Enquanto segue Biriba, você ve uma coisa brilhante no chão. Se você parar para pegar você vai se perder do Biriba, e agora?</p>
+[[Eu sou muito boa com caminhos!! Vou entrar e depois eu me acho|mentira]]
+[[Pera ai Biriba!! Rapidinho|esperabiriba]]
+[[Ignorar e seguir Biriba|Cena 2]] 
+
+
+
+
+:: Cena 12 {"position":"900,900","size":"100,100"}
+Você avista um peixe azul que está indo em uma direção duvidosa.
+[[Ir para o brechó|brecho]]
+[[Seguir o peixe azul|peixeazul]]
+
+
+:: Cena 13 {"position":"700,1075","size":"100,100"}
+Boa! Agora siga o peixe azul, deu trabalho fazer o joguinho
+[[Ok|peixeazul]]
+
+
+:: Cena 2 {"position":"900,625","size":"100,100"}
+<p>Biriba está em frente a uma escola te esperando, preocupado, dizendo que precisa de um mapa que está com uma entidade mágica.</p>
+[[Entrar na escola|escola]]
+(if: $mapa is true)[[Biriba! Achei o mapa!!| Cena 3]]
+
+
+:: Cena 7 {"position":"375,825","size":"100,100"}
+<p>Você encontra bolinhas de queijo com um gosto incrível! Maria late feliz.</p>
+(text-colour:green)[[ITADAKIMASU|pegarmapa]]
+
+
+:: Intro [inicio] {"position":"900,300","size":"100,100"}
+<h1>Oi Papa! Bem-vinda ao Fundo do Mar!</h1>
+<p>Eu sou o Biriba e serei seu guia nessa aventura mágica! Você está prestes a explorar maravilhas submarinas. Bora?</p>
+<button>[[🐠 Seguir o Biriba!|Cena 1]]</button>
+
+
+:: brecho {"position":"725,900","size":"100,100"}
+Você também vai comprar coisas pro seu namorado lindo?
+[[Sim|Cena 13]]
+[[Não|morreu]]
+
+
+:: brilhante {"position":"575,450","size":"100,100"}
+<p>Parabéns! 🎉🎉🎉🎉 Você obeteve um:</p>
+''(text-colour:green)[<p>Invisalign Dourado!</p>]''
+[[Voltar e seguir Biriba!|Cena 2]]
+(set: $invisa to true)
+
+
+:: carinho {"position":"500,650","size":"100,100"}
+<p>Maria te guia até um quarto submerso cheio de fotos suas com seus amigos. No centro, ela começa a cavar.</p>
+[[Ajudar Maria a cavar|Cena 7]]  
+[[Não vou cavar, não sou cachorro|morreu]]
+
+
+:: celular {"position":"725,775","size":"100,100"}
+Quando você estava nos 4 cantos, um peixe passou e roubou seu celular.
+[[Manter a calma e esperar a correnteza passar|Cena 12]]
+
+
+:: escola {"position":"650,600","size":"100,100"}
+<p>Bem-vinda à ''escolhinha da Maria''!!</p>
+<p>Ela vem abanando o rabinho até você</p>
+[[Ignorar|morreu]]
+[[Fazer carinho|carinho]]
+
+
+
+:: esperabiriba {"position":"725,375","size":"100,100"}
+<p>Biriba: você vai atrasar?</p>
+[[Sim|brilhante]]
+[[Não|morreu]]
+
+
+:: fim {"position":"900,1825","size":"100,100"}
+<p>Parabéns! 🎉🎉🎉🎉 Você obeteve um:</p>
+''(text-colour:green)[<p>Mergulho em Arraial do Cabo</p>]''
+Fim do jogo!
+Te amo!
+
+
+:: gymrats {"position":"900,1700","size":"100,100"}
+Você encontra o Biriba na Hot-Ioga. Ele sorri e diz: "Sabia que você conseguiria"
+
+O tio Ma fica na hot e vocês seguem a jornada.
+
+De repente vocês encontram um Baú Dourado.
+
+A chave tem um formato de dentadura.
+
+(if: $mapa is true)[[Inserir Invisalign Durado|fim]]
+
+
+:: ioga {"position":"900,1575","size":"100,100"}
+Você sente a água ficando muito quente do nada.
+
+O Tio Ma diz que o Biriba está numa aula de hot-yoga
+
+[[Vou verificar a colocação no Gym Rats para saber se preciso ir na Hot|gymrats]]
+[[Vou na Hot, não faço exercício só por causa do GymRats|ioga]]
+
+
+:: ju {"position":"900,1325","size":"100,100"}
+Você chegou na ''casa da Ju''!!!
+
+Lá tinha um banquete VEGANO!
+
+<p>Parabéns! 🎉🎉🎉🎉 Você ganhou um:</p>
+''(text-colour:green)[<p>Jantar num restaurante vegano</p>]''
+
+Realmente, a amizade é tudo.
+
+[[Alimentar o peixe azul|tioma]]
+
+
+:: mentira {"position":"1125,450","size":"100,100"}
+<p>Amor, isso é mentira, chama o Biriba👍.</p>
+[[Verdade lindo você está certo, como sempre|Cena 1]]  
+
+
+:: morreu {"position":"375,400","size":"100,100"}
+Você morreu
+[[Recomeçar|Intro]]
+
+
+:: pegarmapa {"position":"375,950","size":"100,100"}
+<p>Vocês duas comem e ela se transforma numa linda maga. Ela te entrega um mapa e um bilhete.</p>
+<p>O bilhete diz: "O segredo está na amizade. Siga o peixe azul." Maria late, confirmando.</p>
+[[Pegar o mapa e voltar para Biriba|Cena 2]]
+(set: $mapa to true)
+
+
+:: peixeazul {"position":"900,1075","size":"100,100"}
+O Peixe M não está mais respondendo, você precisa achar comida rápido.
+
+[[Procurar comida!|theoffice]]
+
+
+:: theoffice {"position":"900,1200","size":"100,100"}
+<audio controls>
+  <source src="the_office.mp3" type="audio/ogg">
+</audio>
+
+[[Seguir a música|ju]]
+
+
+:: tioma {"position":"900,1450","size":"100,100"}
+Ao terminar de comer, o peixe M começa a se transformar....
+
+no Tio Ma!
+
+E ele diz que sabe onde encontrar o Biriba
+
+[[Seguir Tio Ma (kkk)|ioga]]
+
+
+:: StoryStylesheet [stylesheet]
+/* Estilo geral */
+tw-story {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #ffffff;
+    background-color: #003366;
+    text-align: center;
+}
+
+/* Estilo para cenas específicas com a tag [inicio] */
+tw-story[tags~="inicio"] {
+    background-image: url("https://images.pexels.com/photos/13277592/pexels-photo-13277592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo para conteúdo dentro das cenas */
+.intro-content, .scene-content {
+    padding: 20px;
+    background: rgba(0, 51, 102, 0.8); /* Fundo semitransparente */
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    margin: 10% auto;
+    max-width: 500px;
+}
+
+/* Estilo para cabeçalhos */
+h1, h2 {
+    font-size: 2.5em;
+}
+
+/* Estilo para parágrafos */
+p {
+    font-size: 1.2em;
+}
+
+/* Estilo para botões */
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
