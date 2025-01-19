@@ -111,7 +111,6 @@ Um brechó, uma música ao fundo, um rastro na areia</p>
 (if: $brecho is false)[<button>[[Dar uma passadinha no brechó|brecho]]</button>]
 (if: $casadaju is false)[<button>[[Seguir a música|theoffice]]</button>]
 <button>[[Seguir o rastro|fome]]</button>
-<button>[[Seguir a música|theoffice]]</button>
 
 
 
