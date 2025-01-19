@@ -9,221 +9,146 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Fundo do Mar.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Fundo do Mar" startnode="7" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F47236DC-4163-4F60-B3CB-013ACBAB9CFB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Reset para altura e remoção de scroll */
+<tw-storydata name="Fundo do Mar" startnode="7" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F47236DC-4163-4F60-B3CB-013ACBAB9CFB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Reset for height and scroll */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
-/* Estilo geral */
+/* General style */
 tw-story {
-    font-family: "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
+    font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
     color: #fff;
-    background: linear-gradient(to bottom, #003366, #006699); /* Gradiente azul */
+    background: linear-gradient(to bottom, #003366, #006699);
     text-align: center;
-    padding: 20px;
-    min-height: 100vh;  /* Change height to min-height */
-    min-height: calc(var(--vh, 1vh) * 100);  /* Add this line */
+    padding: 10px; /* Reduced from 20px */
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Changed from center to reduce top space */
     align-items: center;
     box-sizing: border-box;
-    transition: background 0.5s ease-in-out;
-    overflow-y: auto;  /* Add this line to enable scrolling */
-    -webkit-overflow-scrolling: touch;  /* Add this for smooth mobile scrolling */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Estilo para cenas específicas com a tag [inicio] */
+/* Initial scene style */
 tw-story[tags~="inicio"] {
     background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20230630/pngtree-3d-render-of-underwater-stone-abstract-background-image_3691196.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: white;
-    animation: fadeIn 1s ease-out; /* Animação suave ao entrar na cena */
+    animation: fadeIn 1s ease-out;
 }
 
-/* Estilo para conteúdo dentro das cenas */
+/* Scene content */
 .intro-content, .scene-content {
-    padding: 25px;
-    background: rgba(0, 51, 102, 0.8); /* Fundo mais transparente */
+    padding: 15px; /* Reduced from 25px */
+    background: rgba(0, 51, 102, 0.8);
     border-radius: 20px;
-    margin: 20px;
+    margin: 10px; /* Reduced from 20px */
     max-width: 650px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
-    backdrop-filter: blur(10px); /* Maior desfoque */
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
-/* Animação suave de entrada */
-.intro-content, .scene-content:hover {
-    transform: scale(1.05);
-}
-
-/* Estilo para cabeçalhos */
+/* Headers */
 h1, h2 {
-    font-size: 3.2em;
-    color: #ff9900; /* Laranja suave */
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6); /* Sombra mais intensa */
+    font-size: 2em; /* Reduced from 3.2em */
+    color: #ff9900;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    margin: 5px 0; /* Added to reduce vertical space */
 }
 
-/* Efeito de hover para cabeçalhos */
-h1:hover, h2:hover {
-    color: #ffcc00; /* Mudança de cor ao passar o mouse */
-}
-
-/* Estilo para parágrafos */
+/* Paragraphs */
 p {
-    font-size: 1.6em;
-    line-height: 1.8;
-    margin: 25px auto;
+    font-size: 1em; /* Reduced from 1.6em */
+    line-height: 1.3; /* Reduced from 1.8 */
+    margin: 10px auto; /* Reduced from 25px */
     color: #003366;
-    background-color: rgba(255, 255, 255, 0.85); /* Fundo mais claro */
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 8px; /* Reduced from 10px */
     border-radius: 15px;
     width: 100%;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
-/* Animação suave nos parágrafos ao passar o mouse */
-p:hover {
-    transform: translateY(-8px); /* Eleva mais ao passar o mouse */
-    background-color: rgba(255, 255, 255, 0.9); /* Alteração no fundo */
-}
-
-/* Estilo para botões */
+/* Buttons */
 button {
-    background-color: #ffb84d; /* Cor suave: laranja claro */
+    background-color: #ffb84d;
     color: #003366;
-    font-size: 1.4em; /* Tamanho de texto aumentado */
-    padding: 18px 40px;
-    margin: 15px;
+    font-size: 1em; /* Reduced from 1.4em */
+    padding: 10px 25px; /* Reduced from 18px 40px */
+    margin: 8px; /* Reduced from 15px */
     border: none;
     border-radius: 40px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Efeito de hover nos botões */
-button:hover {
-    background-color: #ff9933; /* Laranja mais intenso */
-    transform: scale(1.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    color: #fff;
-}
-
-/* Efeito de clique nos botões */
-button:active {
-    transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para imagens */
+/* Images - keeping original size but reducing margins */
 img {
     width: 80%;
     max-width: 550px;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-    transition: transform 0.3s ease;
+    margin: 10px 0; /* Reduced from 20px */
 }
 
-/* Efeito de hover nas imagens */
-img:hover {
-    transform: scale(1.05); /* Imagem aumenta suavemente */
-}
-
-/* Estilo para textos soltos */
-span, div {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #003366;
-    padding: 14px 20px;
-    border-radius: 15px;
-    display: inline-block;
-    margin: 10px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-    font-size: 1.3em;
-    transition: transform 0.2s ease-in-out;
-}
-
-/* Efeito de hover nos textos soltos */
-span:hover, div:hover {
-    transform: scale(1.05);
-}
-
-/* Estilo para links */
-a {
-    color: #ffb84d; /* Cor de link suave */
-    text-decoration: none;
-    transition: color 0.3s, transform 0.2s ease-in-out;
-}
-
-/* Efeito de hover nos links */
-a:hover {
-    color: #ff9933;
-    text-decoration: underline;
-    transform: scale(1.1); /* Aumenta o link suavemente */
-}
-
-/* Animação de Fade In */
+/* Animation */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">function ajustarAltura() {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 window.addEventListener('resize', ajustarAltura);
-ajustarAltura(); // Chamada inicial</script><tw-passagedata pid="1" name=" Cena 3" tags="" position="900,750" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/fundo.jpg&quot;&gt;
+ajustarAltura(); // Chamada inicial</script><tw-passagedata pid="1" name=" Cena 3" tags="" position="900,750" size="100,100">&lt;img src=&quot;media//fundo.jpg&quot;&gt;
 &lt;p&gt;Incrível Papa! Você encontrou o mapa!
 Siga-me!&lt;/p&gt;
 &lt;p&gt;Você segue Biriba mas uma forte correnteza faz vocês se perderem&lt;/p&gt;
 &lt;button&gt;[[Ligar o waze|celular]]&lt;/button&gt;
-&lt;button&gt;[[Manter a calma e esperar a correnteza passar|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="2" name="Cena 1" tags="" position="900,475" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/brilhante.jpg&quot;&gt;
+&lt;button&gt;[[Manter a calma e esperar a correnteza passar|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="2" name="Cena 1" tags="" position="900,475" size="100,100">&lt;img src=&quot;media//brilhante.jpg&quot;&gt;
 &lt;p&gt;Enquanto segue Biriba, você ve uma coisa brilhante no chão
 Se você pegar você vai se perder do Biriba, e agora?&lt;/p&gt;
 &lt;button&gt;[[Eu sou muito boa com caminhos!!
 Vou parar e depois eu me acho|mentira]]&lt;/button&gt;
 &lt;button&gt;[[Pera ai Biriba!! Rapidinho|esperabiriba]]&lt;/button&gt;
-&lt;button&gt;[[Ignorar e seguir Biriba|Cena 2]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="3" name="cruzamento" tags="" position="900,900" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/cruzamento.webp&quot;&gt;
+&lt;button&gt;[[Ignorar e seguir Biriba|Cena 2]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="3" name="cruzamento" tags="" position="900,900" size="100,100">&lt;img src=&quot;media//cruzamento.webp&quot;&gt;
 &lt;p&gt;A correnteza passa... e você está em um cruzamento
 De repente muitas coisas aparecem.
 Um brechó, uma música ao fundo, um rastro na areia&lt;/p&gt;
 (if: $brecho is false)[&lt;button&gt;[[Dar uma passadinha no brechó|brecho]]&lt;/button&gt;]
 (if: $casadaju is false)[&lt;button&gt;[[Seguir a música|theoffice]]&lt;/button&gt;]
 &lt;button&gt;[[Seguir o rastro|fome]]&lt;/button&gt;
-</tw-passagedata><tw-passagedata pid="4" name="Cena 13" tags="" position="500,1100" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/brecho.webp&quot;&gt;
+</tw-passagedata><tw-passagedata pid="4" name="Cena 13" tags="" position="500,1100" size="100,100">&lt;img src=&quot;media//brecho.webp&quot;&gt;
 &lt;p&gt;Bem-vinda ao &#39;&#39;Brechó do lado da clínica&#39;&#39;!!
 Parabéns 🎉🎉🎉🎉
 Você ganhou
 &lt;h1&gt;&#39;&#39;(text-colour:#862e9c)[Vale-compras de 100 reais no brechó]&#39;&#39;&lt;/h1&gt;
 (set: $brecho to true)
-&lt;button&gt;[[Voltar para cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="5" name="Cena 2" tags="" position="900,625" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/escola.webp&quot;&gt;
+&lt;button&gt;[[Voltar para cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="5" name="Cena 2" tags="" position="900,625" size="100,100">&lt;img src=&quot;media//escola.webp&quot;&gt;
 (if: $mapa is true)[&lt;p&gt;Biriba ainda está esperando em frente à escola
 Ele precisa de um mapa que está com uma entidade mágica&lt;/p&gt;]
 (else:)[&lt;p&gt;Biriba parou em frente a uma escola
 Ele precisa de um mapa que está com uma entidade mágica&lt;/p&gt;]
 &lt;button&gt;[[Entrar na escola|escola]]&lt;/button&gt;
-(if: $mapa is true)[&lt;button&gt;[[Entregar mapa para Biriba| Cena 3]]&lt;/button&gt;]</tw-passagedata><tw-passagedata pid="6" name="Cena 7" tags="" position="375,775" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/caverna.jpg&quot;&gt;
+(if: $mapa is true)[&lt;button&gt;[[Entregar mapa para Biriba| Cena 3]]&lt;/button&gt;]</tw-passagedata><tw-passagedata pid="6" name="Cena 7" tags="" position="375,775" size="100,100">&lt;img src=&quot;media//caverna.jpg&quot;&gt;
 &lt;p&gt;Ela cava tanto que acha um túnel!!&lt;/p&gt;
 &lt;button&gt;[[Entrar no túnel|aspargus]]&lt;/button&gt;
 &lt;button&gt;[[Voltar para porta da escola|Cena 2]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="7" name="Intro" tags="inicio" position="900,275" size="100,100">&lt;h1&gt;Oi Papa! Bem-vinda ao Fundo do Mar!&lt;/h1&gt;
 &lt;p&gt;Eu sou o Biriba e serei seu guia nessa aventura mágica!
 Você está prestes a explorar maravilhas submarinas. Bora?&lt;/p&gt;
-&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/biriba.jpeg&quot;&gt;
+&lt;img src=&quot;media//biriba.jpeg&quot;&gt;
 &lt;button&gt;[[🐠 Seguir o Biriba!|Cena 1]]&lt;/button&gt;
 
 (set: $brecho to false)
@@ -233,26 +158,26 @@ Você está prestes a explorar maravilhas submarinas. Bora?&lt;/p&gt;
 Você obteve
 (text-colour:#862e9c)[&#39;&#39;Invisalign Dourado!&#39;&#39;]&lt;/p&gt;
 &lt;button&gt;[[Voltar e seguir Biriba!|Cena 2]]&lt;/button&gt;
-(set: $invisa to true)</tw-passagedata><tw-passagedata pid="10" name="carinho" tags="" position="475,650" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/cava.png&quot;&gt;
+(set: $invisa to true)</tw-passagedata><tw-passagedata pid="10" name="carinho" tags="" position="475,650" size="100,100">&lt;img src=&quot;media//cava.png&quot;&gt;
 &lt;p&gt;Maria te guia até um lugar onde ela começa a cavar&lt;/p&gt;
 &lt;button&gt;[[Deixar Maria cavar|Cena 7]] &lt;/button&gt;
-&lt;button&gt;[[Dar bronca na Maria|morreu]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="11" name="celular" tags="" position="725,775" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/quatrocantos.jpg&quot;&gt;
+&lt;button&gt;[[Dar bronca na Maria|morreu]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="11" name="celular" tags="" position="725,775" size="100,100">&lt;img src=&quot;media//quatrocantos.jpg&quot;&gt;
 &lt;p&gt;Quando você estava nos 4 cantos, um peixe passou e roubou seu celular
 Sua única opção é esperar a correnteza passar&lt;/p&gt;
-&lt;button&gt;[[Manter a calma e esperar a correnteza passar|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="12" name="escola" tags="" position="625,600" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/maria.jpg&quot;&gt;
+&lt;button&gt;[[Manter a calma e esperar a correnteza passar|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="12" name="escola" tags="" position="625,600" size="100,100">&lt;img src=&quot;media//maria.jpg&quot;&gt;
 &lt;p&gt;Bem-vinda à &#39;&#39;escolhinha da Maria&#39;&#39;!!
 Ela vem abanando o rabinho até você&lt;/p&gt;
 &lt;button&gt;[[Ignorar|morreu]]&lt;/button&gt;
-&lt;button&gt;[[Fazer carinho|carinho]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="13" name="esperabiriba" tags="" position="750,375" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/oi.webp&quot;&gt;
+&lt;button&gt;[[Fazer carinho|carinho]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="13" name="esperabiriba" tags="" position="750,375" size="100,100">&lt;img src=&quot;media//oi.webp&quot;&gt;
 &lt;p&gt;Biriba: você vai atrasar?&lt;/p&gt;
 &lt;button&gt;[[Sim|brilhante]]&lt;/button&gt;
-&lt;button&gt;[[Não, eu nunca me atraso|esperabiriba]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="14" name="fim" tags="" position="1125,1800" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/final.jpg&quot;&gt;
+&lt;button&gt;[[Não, eu nunca me atraso|esperabiriba]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="14" name="fim" tags="" position="1125,1800" size="100,100">&lt;img src=&quot;media//final.jpg&quot;&gt;
 &lt;p&gt;Parabéns 🎉🎉🎉🎉
 Você ganhou&lt;/p&gt;
 &lt;h1&gt;&#39;&#39;(text-colour:#862e9c)[Mergulho em Arraial do Cabo]&#39;&#39;&lt;/h1&gt;
 &lt;button&gt;[[Terminar|resumo]]&lt;/button&gt;
 (set: $mergulho to true)
-</tw-passagedata><tw-passagedata pid="15" name="gymrats" tags="" position="1050,1675" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/biriba2.jpeg&quot;&gt;
+</tw-passagedata><tw-passagedata pid="15" name="gymrats" tags="" position="1050,1675" size="100,100">&lt;img src=&quot;media//biriba2.jpeg&quot;&gt;
 &lt;p&gt;Você encontrou o Biriba!
 De repente vocês encontram um lindo Baú Dourado
 A chave tem um formato de invisalign&lt;/p&gt;
@@ -260,11 +185,11 @@ A chave tem um formato de invisalign&lt;/p&gt;
 (if: $invisa is false)[&lt;button&gt;[[Pedir para Biriba te guiar de volta|Cena 1]]&lt;/button&gt;]
 (if: $invisa is false)[&lt;button&gt;[[Cansei|resumo]]&lt;/button&gt;]
 (if: $invisa is true)[&lt;button&gt;[[Inserir Invisalign Durado|fim]]&lt;/button&gt;]
-&lt;button&gt;[[Voltar para cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="16" name="ioga" tags="" position="975,1550" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/ioga.jpg&quot;&gt;
+&lt;button&gt;[[Voltar para cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="16" name="ioga" tags="" position="975,1550" size="100,100">&lt;img src=&quot;media//ioga.jpg&quot;&gt;
 &lt;p&gt;A água vai ficando muito quente
 Parece que Biriba está numa aula de hot-yoga&lt;/p&gt;
 &lt;button&gt;[[Vou ver o GymRats para saber se vou|gymrats]]&lt;/button&gt;
-&lt;button&gt;[[Vou na Hot, não faço exercício só por causa do GymRats|ioga]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="17" name="ju" tags="" position="1200,1050" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/casaju.jpg&quot;&gt;
+&lt;button&gt;[[Vou na Hot, não faço exercício só por causa do GymRats|ioga]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="17" name="ju" tags="" position="1200,1050" size="100,100">&lt;img src=&quot;media//casaju.jpg&quot;&gt;
 &lt;p&gt;Bem-vinda à &#39;&#39;casa da Ju&#39;&#39;!!
 Parabéns 🎉🎉🎉🎉
 Você &#39;&#39;GANHOU&#39;&#39;
@@ -275,9 +200,9 @@ Você &#39;&#39;GANHOU&#39;&#39;
 (set: $casadaju to true)
 &lt;button&gt;[[Voltar para cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="18" name="mentira" tags="" position="1125,450" size="100,100">&lt;p&gt;Amor, isso é mentira, chama o Biriba👍&lt;/p&gt;
 &lt;button&gt;[[Verdade lindo você está certo
-Como sempre|Cena 1]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="19" name="morreu" tags="" position="325,400" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/perdeu.jpg&quot;&gt;
+Como sempre|Cena 1]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="19" name="morreu" tags="" position="325,400" size="100,100">&lt;img src=&quot;media//perdeu.jpg&quot;&gt;
 &lt;p&gt;Você perdeu&lt;/p&gt;
-&lt;button&gt;[[Recomeçar|Intro]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="20" name="pegarmapa" tags="" position="425,950" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/mago.png&quot;&gt;
+&lt;button&gt;[[Recomeçar|Intro]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="20" name="pegarmapa" tags="" position="425,950" size="100,100">&lt;img src=&quot;media//mago.png&quot;&gt;
 &lt;p&gt;Leve essa marmita com bolinhas de queijo para comer com a Le entre os atendimentos
 Siga o peixe azul
 Entregue esse mapa para Biriba
@@ -290,29 +215,29 @@ Você obteve:
 
 &lt;button&gt;[[Pegar os itens e voltar para Biriba|Cena 2]]&lt;/button&gt;
 (set: $mapa to true)
-(set: $marmita to true)</tw-passagedata><tw-passagedata pid="21" name="peixeazul" tags="" position="950,1225" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/tioma2.png&quot;&gt;
+(set: $marmita to true)</tw-passagedata><tw-passagedata pid="21" name="peixeazul" tags="" position="950,1225" size="100,100">&lt;img src=&quot;media//tioma2.png&quot;&gt;
 &lt;p&gt;Olá, eu sou o Peixe M
 Estou com muita fome, me ajuda a procurar comida?&lt;/p&gt;
 
 (if: $marmita is true)[&lt;button&gt;[[Entregar marmita para o peixe azul|tioma]]&lt;/button&gt;]
 &lt;button&gt;[[Voltar para o cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="22" name="theoffice" tags="" position="1150,875" size="100,100">&lt;audio controls&gt;
-  &lt;source src=&quot;C:/Users/pedro/Documents/Twine/Stories/the_office.mp3&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;media//the_office.mp3&quot; type=&quot;audio/ogg&quot;&gt;
 &lt;/audio&gt;
 
-&lt;button&gt;[[Seguir o som|ju]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="23" name="tioma" tags="" position="975,1375" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/tioma3.jpg&quot;&gt;
+&lt;button&gt;[[Seguir o som|ju]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="23" name="tioma" tags="" position="975,1375" size="100,100">&lt;img src=&quot;media//tioma3.jpg&quot;&gt;
 &lt;p&gt;Depois de comer o peixe M começa a se transformar....
 
 no Tio Ma!
 
 E ele diz que sabe onde encontrar o Biriba !&lt;/p&gt;
 
-&lt;button&gt;[[Seguir Tio Ma (kkkkkk)|ioga]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="24" name="fome" tags="" position="875,1075" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/tioma.png&quot;&gt;
+&lt;button&gt;[[Seguir Tio Ma (kkkkkk)|ioga]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="24" name="fome" tags="" position="875,1075" size="100,100">&lt;img src=&quot;media//tioma.png&quot;&gt;
 &lt;p&gt;Ao seguir o restro você encontra...
 Um lindo peixe azul !!!&lt;/p&gt;
 &lt;button&gt;[[Falar com ele|peixeazul]]&lt;/button&gt;
-&lt;button&gt;[[Voltar para o cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="25" name="aspargus" tags="" position="275,900" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/aspargus.png&quot;&gt;
+&lt;button&gt;[[Voltar para o cruzamento|cruzamento]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="25" name="aspargus" tags="" position="275,900" size="100,100">&lt;img src=&quot;media//aspargus.png&quot;&gt;
 &lt;p&gt;Você encontra o Aspargus! Maria late feliz, hoje é dia de feijoada!&lt;/p&gt;
-&lt;button&gt;(text-colour:#087f5b)[[ITADAKIMASU|pegarmapa]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="26" name="resumo" tags="" position="900,1825" size="100,100">&lt;img src=&quot;C:/Users/pedro/Documents/Twine/Stories/mergulho.jpeg&quot;&gt;
+&lt;button&gt;(text-colour:#087f5b)[[ITADAKIMASU|pegarmapa]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="26" name="resumo" tags="" position="900,1825" size="100,100">&lt;img src=&quot;media//mergulho.jpeg&quot;&gt;
 &lt;h1&gt;Feliz aniversário gatinha! Te amo!&lt;/h1&gt;
 &lt;p&gt; Você ganhou
 (if: $brecho is true)[(text-colour:#862e9c)[Vale-compras de 100 reais no brechó]]
