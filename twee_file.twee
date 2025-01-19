@@ -13,7 +13,7 @@ Fundo do Mar
 
 
 :: \ Cena 3 {"position":"900,750","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/fundo.jpg">
+<img src="media/fundo.jpg">
 <p>Incrível Papa! Você encontrou o mapa!
 Siga-me!</p>
 <p>Você segue Biriba mas uma forte correnteza faz vocês se perderem</p>
@@ -22,16 +22,17 @@ Siga-me!</p>
 
 
 :: Cena 1 {"position":"900,475","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/brilhante.jpg">
+<img src="media/brilhante.jpg">
 <p>Enquanto segue Biriba, você ve uma coisa brilhante no chão
 Se você pegar você vai se perder do Biriba, e agora?</p>
-<button>[[Eu sou muito boa com caminhos!! Vou parar e depois eu me acho|mentira]]</button>
+<button>[[Eu sou muito boa com caminhos!!
+Vou parar e depois eu me acho|mentira]]</button>
 <button>[[Pera ai Biriba!! Rapidinho|esperabiriba]]</button>
 <button>[[Ignorar e seguir Biriba|Cena 2]]</button>
 
 
 :: Cena 13 {"position":"500,1100","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/brecho.webp">
+<img src="media/brecho.webp">
 <p>Bem-vinda ao ''Brechó do lado da clínica''!!
 Parabéns 🎉🎉🎉🎉
 Você ganhou
@@ -41,7 +42,7 @@ Você ganhou
 
 
 :: Cena 2 {"position":"900,625","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/escola.webp">
+<img src="media/escola.webp">
 (if: $mapa is true)[<p>Biriba ainda está esperando em frente à escola
 Ele precisa de um mapa que está com uma entidade mágica</p>]
 (else:)[<p>Biriba parou em frente a uma escola
@@ -51,7 +52,7 @@ Ele precisa de um mapa que está com uma entidade mágica</p>]
 
 
 :: Cena 7 {"position":"375,775","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/caverna.jpg">
+<img src="media/caverna.jpg">
 <p>Ela cava tanto que acha um túnel!!</p>
 <button>[[Entrar no túnel|aspargus]]</button>
 <button>[[Voltar para porta da escola|Cena 2]]</button>
@@ -61,7 +62,7 @@ Ele precisa de um mapa que está com uma entidade mágica</p>]
 <h1>Oi Papa! Bem-vinda ao Fundo do Mar!</h1>
 <p>Eu sou o Biriba e serei seu guia nessa aventura mágica!
 Você está prestes a explorar maravilhas submarinas. Bora?</p>
-<img src="C:/Users/pedro/Documents/Twine/Stories/biriba.jpeg">
+<img src="media/biriba.jpeg">
 <button>[[🐠 Seguir o Biriba!|Cena 1]]</button>
 
 (set: $brecho to false)
@@ -69,7 +70,7 @@ Você está prestes a explorar maravilhas submarinas. Bora?</p>
 
 
 :: aspargus {"position":"275,900","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/aspargus.png">
+<img src="media/aspargus.png">
 <p>Você encontra o Aspargus! Maria late feliz, hoje é dia de feijoada!</p>
 <button>(text-colour:#087f5b)[[ITADAKIMASU|pegarmapa]]</button>
 
@@ -89,21 +90,21 @@ Você obteve
 
 
 :: carinho {"position":"475,650","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/cava.png">
+<img src="media/cava.png">
 <p>Maria te guia até um lugar onde ela começa a cavar</p>
 <button>[[Deixar Maria cavar|Cena 7]] </button>
 <button>[[Dar bronca na Maria|morreu]]</button>
 
 
 :: celular {"position":"725,775","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/quatrocantos.jpg">
+<img src="media/quatrocantos.jpg">
 <p>Quando você estava nos 4 cantos, um peixe passou e roubou seu celular
 Sua única opção é esperar a correnteza passar</p>
 <button>[[Manter a calma e esperar a correnteza passar|cruzamento]]</button>
 
 
 :: cruzamento {"position":"900,900","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/cruzamento.webp">
+<img src="media/cruzamento.webp">
 <p>A correnteza passa... e você está em um cruzamento
 De repente muitas coisas aparecem.
 Um brechó, uma música ao fundo, um rastro na areia</p>
@@ -114,7 +115,7 @@ Um brechó, uma música ao fundo, um rastro na areia</p>
 
 
 :: escola {"position":"625,600","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/maria.jpg">
+<img src="media/maria.jpg">
 <p>Bem-vinda à ''escolhinha da Maria''!!
 Ela vem abanando o rabinho até você</p>
 <button>[[Ignorar|morreu]]</button>
@@ -122,14 +123,14 @@ Ela vem abanando o rabinho até você</p>
 
 
 :: esperabiriba {"position":"750,375","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/oi.webp">
+<img src="media/oi.webp">
 <p>Biriba: você vai atrasar?</p>
 <button>[[Sim|brilhante]]</button>
 <button>[[Não, eu nunca me atraso|esperabiriba]]</button>
 
 
 :: fim {"position":"1125,1800","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/final.jpg">
+<img src="media/final.jpg">
 <p>Parabéns 🎉🎉🎉🎉
 Você ganhou</p>
 <h1>''(text-colour:#862e9c)[Mergulho em Arraial do Cabo]''</h1>
@@ -139,7 +140,7 @@ Você ganhou</p>
 
 
 :: fome {"position":"875,1075","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/tioma.png">
+<img src="media/tioma.png">
 <p>Ao seguir o restro você encontra...
 Um lindo peixe azul !!!</p>
 <button>[[Falar com ele|peixeazul]]</button>
@@ -147,7 +148,7 @@ Um lindo peixe azul !!!</p>
 
 
 :: gymrats {"position":"1050,1675","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/biriba2.jpeg">
+<img src="media/biriba2.jpeg">
 <p>Você encontrou o Biriba!
 De repente vocês encontram um lindo Baú Dourado
 A chave tem um formato de invisalign</p>
@@ -159,7 +160,7 @@ A chave tem um formato de invisalign</p>
 
 
 :: ioga {"position":"975,1550","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/ioga.jpg">
+<img src="media/ioga.jpg">
 <p>A água vai ficando muito quente
 Parece que Biriba está numa aula de hot-yoga</p>
 <button>[[Vou ver o GymRats para saber se vou|gymrats]]</button>
@@ -167,7 +168,7 @@ Parece que Biriba está numa aula de hot-yoga</p>
 
 
 :: ju {"position":"1200,1050","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/casaju.jpg">
+<img src="media/casaju.jpg">
 <p>Bem-vinda à ''casa da Ju''!!
 Parabéns 🎉🎉🎉🎉
 Você ''GANHOU''
@@ -181,17 +182,18 @@ Você ''GANHOU''
 
 :: mentira {"position":"1125,450","size":"100,100"}
 <p>Amor, isso é mentira, chama o Biriba👍</p>
-<button>[[Verdade lindo você está certo, como sempre|Cena 1]]</button>
+<button>[[Verdade lindo você está certo
+Como sempre|Cena 1]]</button>
 
 
 :: morreu {"position":"325,400","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/perdeu.jpg">
+<img src="media/perdeu.jpg">
 <p>Você perdeu</p>
 <button>[[Recomeçar|Intro]]</button>
 
 
 :: pegarmapa {"position":"425,950","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/mago.png">
+<img src="media/mago.png">
 <p>Leve essa marmita com bolinhas de queijo para comer com a Le entre os atendimentos
 Siga o peixe azul
 Entregue esse mapa para Biriba
@@ -208,7 +210,7 @@ Você obteve:
 
 
 :: peixeazul {"position":"950,1225","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/tioma2.png">
+<img src="media/tioma2.png">
 <p>Olá, eu sou o Peixe M
 Estou com muita fome, me ajuda a procurar comida?</p>
 
@@ -217,7 +219,7 @@ Estou com muita fome, me ajuda a procurar comida?</p>
 
 
 :: resumo {"position":"900,1825","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/mergulho.jpeg">
+<img src="media/mergulho.jpeg">
 <h1>Feliz aniversário gatinha! Te amo!</h1>
 <p> Você ganhou
 (if: $brecho is true)[(text-colour:#862e9c)[Vale-compras de 100 reais no brechó]]
@@ -229,14 +231,14 @@ Estou com muita fome, me ajuda a procurar comida?</p>
 
 :: theoffice {"position":"1150,875","size":"100,100"}
 <audio controls>
-  <source src="C:/Users/pedro/Documents/Twine/Stories/the_office.mp3" type="audio/ogg">
+  <source src="media/the_office.mp3" type="audio/ogg">
 </audio>
 
 <button>[[Seguir o som|ju]]</button>
 
 
 :: tioma {"position":"975,1375","size":"100,100"}
-<img src="C:/Users/pedro/Documents/Twine/Stories/tioma3.jpg">
+<img src="media/tioma3.jpg">
 <p>Depois de comer o peixe M começa a se transformar....
 
 no Tio Ma!
@@ -261,7 +263,6 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Remove o scroll vertical */
 }
 
 /* Estilo geral */
@@ -271,13 +272,16 @@ tw-story {
     background: linear-gradient(to bottom, #003366, #006699); /* Gradiente azul */
     text-align: center;
     padding: 20px;
-    height: 100vh; /* Altura igual à altura visível da tela */
+    min-height: 100vh;  /* Change height to min-height */
+    min-height: calc(var(--vh, 1vh) * 100);  /* Add this line */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
     transition: background 0.5s ease-in-out;
+    overflow-y: auto;  /* Add this line to enable scrolling */
+    -webkit-overflow-scrolling: touch;  /* Add this for smooth mobile scrolling */
 }
 
 /* Estilo para cenas específicas com a tag [inicio] */
